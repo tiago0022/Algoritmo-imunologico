@@ -1,11 +1,12 @@
 function [nova_populacao] = seleciona_melhores_clones(clones_maduros, num_clones);
 
-        tamanho_populacao = size(mais_aptos, 1);
+        tamanho_populacao = size(clones_maduros, 1);
         vetor_afinidade = atribuicao_proporcional_aptidao(clones_maduros);
-        nova_populacao = zeros(tamanho_populacao/num_clones,2);
+        tamanho_nova_populacao = tamanho_populacao/num_clones;
+        nova_populacao = zeros(tamanho_nova_populacao, 2);
 
         linha = 1;
-        for i=1:tamanho_populacao
+        for i=1:tamanho_nova_populacao
             indice_maior_afinidade = linha;
             maior_afinidade = 0;
             for j=1:num_clones

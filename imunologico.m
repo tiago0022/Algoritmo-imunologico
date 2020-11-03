@@ -3,6 +3,9 @@ global exibe_grafico;
 exibe_grafico = 1;
 
 % Inicialização de variáveis
+
+duracao_pausa = 0.1;
+
 max_iteracao = 50;
 tamanho_populacao = 50; % N
 mais_aptos_aproveitados = 50; % n1
@@ -10,7 +13,7 @@ mais_aptos_aproveitados = 50; % n1
 taxa_clonagem = 0.1; % beta
 num_clones = taxa_clonagem * tamanho_populacao; % Nc
 
-taxa_fixa_mutacao = 0.3; % rho
+taxa_fixa_mutacao = 0.8; % rho
 
 % Inicializa população
 populacao = cria_populacao(tamanho_populacao);
@@ -30,11 +33,14 @@ for iteracao = 1:max_iteracao
     % Mutação: os menos aptos sofrem mais mutação
     clones_maduros = mutacao_proporcional(clones, taxa_fixa_mutacao);
     
-    % TODO seleção de clones: seleciona o melhor a cada Nc clones 
-%     nova_populacao = seleciona_melhores_clones(clones_maduros, num_clones);
+    % Seleção de clones: seleciona o melhor a cada Nc clones 
+    nova_populacao = seleciona_melhores_clones(clones_maduros, num_clones);
     
     % Substitui população
-%     populacao = nova_populacao;
+    populacao = nova_populacao;
+    
+    % Exibição
+    pause(duracao_pausa);
     
 end
 
