@@ -5,6 +5,7 @@ function [clones] = clonagem(mais_aptos, num_clones)
     
     clones = zeros(tamanho_clones, 2);
     
+    % Gera Nc clones para cada indivíduo
     indice = 1;
     for i = 1:tamanho_populacao
         for j = 1:num_clones
