@@ -8,6 +8,7 @@ function [populacao] = cria_populacao(tamanho)
      for i = 1 : tamanho
          for j = 1 : 2
             populacao(i,j) = rand(1)*(maximo - minimo) + minimo;
+         end
      end
 
 end
