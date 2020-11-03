@@ -13,7 +13,7 @@ mais_aptos_aproveitados = 50; % n1
 taxa_clonagem = 0.1; % beta
 num_clones = taxa_clonagem * tamanho_populacao; % Nc
 
-taxa_fixa_mutacao = 0.8; % rho
+taxa_fixa_mutacao = 0.6; % rho
 
 % Inicializa população
 populacao = cria_populacao(tamanho_populacao);
