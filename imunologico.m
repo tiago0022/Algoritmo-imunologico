@@ -31,7 +31,7 @@ for iteracao = 1:max_iteracao
     clones_maduros = mutacao_proporcional(clones, taxa_mutacao);
     
     % TODO seleção de clones: seleciona o melhor a cada Nc clones 
-    nova_populacao = seleciona_melhor_clone(clones_maduros, num_clones);
+    nova_populacao = seleciona_melhores_clones(clones_maduros, num_clones);
     
     % Substitui população
     populacao = nova_populacao;
