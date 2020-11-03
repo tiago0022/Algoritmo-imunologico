@@ -28,7 +28,7 @@ for iteracao = 1:max_iteracao
     clones = clonagem(mais_aptos, num_clones);
     
     % Mutação: os menos aptos sofrem mais mutação
-    nova_populacao = mutacao_proporcional(clones, taxa_fixa_mutacao);
+    clones_maduros = mutacao_proporcional(clones, taxa_fixa_mutacao);
     
     % TODO seleção de clones: seleciona o melhor a cada Nc clones 
 %     nova_populacao = seleciona_melhores_clones(clones_maduros, num_clones);
