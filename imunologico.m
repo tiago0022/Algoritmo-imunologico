@@ -21,10 +21,10 @@ for iteracao = 1:max_iteracao
     % exibe população 
     exibe_populacao(populacao);
     
-    % seleciona n1 mais aptos
+    % seleciona n1 mais aptos (não faz diferença se n1 = N)
     mais_aptos = seleciona_mais_aptos(populacao, mais_aptos_aproveitados);
     
-    % TODO clonagem: cada individuo gera Nc clones
+    % Clonagem: cada individuo gera Nc clones
     clones = clonagem(mais_aptos, num_clones);
     
     % TODO mutação: os menos aptos sofrem mais mutação
